@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(clevenshtein VERSION 0.0.1 LANGUAGES C)
+project(clevenshtein VERSION 1.0.0 LANGUAGES C)
 
 option(BUILD_CLEV_EXAMPLE "Set to ON to build clevenshtein example." OFF)
 
