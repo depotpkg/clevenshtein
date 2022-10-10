@@ -8,9 +8,9 @@ int levenshtein(const char *string1, const char *string2, int w, int s, int a, i
   int *row0, *row1, *row2;
   int i, j;
 
-  row0 = malloc(len2 + 1);
-  row1 = malloc(len2 + 1);
-  row2 = malloc(len2 + 1);
+  row0 = malloc((len2 + 1) * sizeof(int));
+  row1 = malloc((len2 + 1) * sizeof(int));
+  row2 = malloc((len2 + 1) * sizeof(int));
 
   for (j = 0; j <= len2; j++)
     row1[j] = j * a;
