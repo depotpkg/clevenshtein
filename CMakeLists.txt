@@ -7,6 +7,8 @@ add_library(clevenshtein STATIC levenshtein.c levenshtein.h)
 
 target_include_directories(clevenshtein PUBLIC .)
 
+target_compile_definitions(clevenshtein PRIVATE CLEV_IMPLEMENTATION)
+
 set_target_properties(clevenshtein PROPERTIES VERSION ${PROJECT_VERSION})
 
 if(BUILD_CLEV_EXAMPLE)
