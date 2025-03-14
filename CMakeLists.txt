@@ -10,7 +10,11 @@ target_include_directories(clevenshtein PUBLIC .)
 target_compile_definitions(clevenshtein PRIVATE CLEV_IMPLEMENTATION)
 
 set_target_properties(clevenshtein PROPERTIES VERSION ${PROJECT_VERSION})
+set_target_properties(clevenshtein PROPERTIES PUBLIC_HEADER levenshtein.h)
 
 if(BUILD_CLEV_EXAMPLE)
   add_subdirectory(example)
 endif()
+
+# Install
+install(TARGETS clevenshtein)
